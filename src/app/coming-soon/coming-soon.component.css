@@ -3,12 +3,14 @@
   align-items: center;
   background: linear-gradient(
     to right top,
-    #7e3400,
-    #9a4920,
-    #9a7563,
+    #ffffff,
     #9a8e88,
-    #ffffff
+    #9a7563,
+    #9a4920,
+    #7e3400
   );
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
   min-height: 100vh;
   text-align: center;
   padding: 10px 8%;
@@ -17,6 +19,19 @@
   padding-bottom: 80px;
 }
 
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* rest of your CSS remains unchanged */
 .coming-soon-container .content {
   flex: 1 1 400px;
 }
